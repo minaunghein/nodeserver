@@ -1,5 +1,8 @@
 const express = require('express');
 
+var port = process.env.PORT || 3000;
+
+
 var app =  express();
 
 app.get('/',(req,res) => {
@@ -8,4 +11,6 @@ app.get('/',(req,res) => {
 })
 
 
-app.listen(3000);
+app.listen(port,()=>{
+    console.log(`running at port ${port}`)
+});
